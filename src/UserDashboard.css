@@ -1,0 +1,368 @@
+/* Container and general layout */
+.user-dashboard-container {
+  padding: 20px;
+  background-color: #f0f0f0;
+  width: 100%;           /* Full width */
+  margin: 0;             /* Remove auto-centering */
+  box-sizing: border-box; /* Prevent padding from overflowing */
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  padding: 10px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.courses-container {
+  margin-top: 20px;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.course-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgb(13, 107, 207);
+}
+
+.course-thumbnail img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.course-content h3 {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+.course-description {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.course-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.start-course-btn {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.start-course-btn:hover {
+  background-color: #45a049;
+}
+
+.video-section {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.video-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 100%;
+}
+
+.video-player {
+  flex: 3;
+  max-width: 560px; /* Standard YouTube width */
+}
+
+.video-container {
+  height: 315px; /* Standard YouTube height */
+  background-color: #000;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.video-container:empty::after {
+  content: 'Loading video...';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+.video-title {
+  margin: 5px 0;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.lecture-list {
+  flex: 1;
+  max-width: 300px;
+  background: #fff;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.lecture-list h3 {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+.lecture-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.lecture-item:hover, .lecture-item.active {
+  background-color: #f0f0f0;
+}
+
+.lecture-item:last-child {
+  border-bottom: none;
+}
+
+.progress-indicator {
+  color: #4CAF50;
+}
+
+.progress-bar {
+  margin: 20px 0;
+  text-align: left;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.progress {
+  width: 100%;
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #4CAF50;
+  transition: width 0.3s ease;
+}
+
+.back-btn {
+  padding: 10px 20px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.back-btn:hover {
+  background-color: #d32f2f;
+}
+
+.loading, .no-courses {
+  text-align: center;
+  color: #666;
+}
+
+/* Navigation bar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.nav-btn:hover {
+  background-color: #45a049;
+}
+
+.nav-btn.active {
+  background-color: #45a049;
+}
+.progress-bar-container {
+  width: 100%;
+  background-color: #aea9a9;
+  height: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.progress-p {
+  height: 100%;
+  background-color: #0381c0;
+  transition: width 0.4s ease;
+}
+
+
+.profile-section {
+  margin: 20px auto;
+  padding: 30px;
+  max-width: 600px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  text-align: left;
+}
+
+.profile-section h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #2c3e50;
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.profile-field strong {
+  color: #555;
+  min-width: 140px;
+  display: inline-block;
+}
+
+.enrolled-courses {
+  list-style: none;
+  padding-left: 0;
+}
+
+.enrolled-courses li {
+  background: #ffffff;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  font-weight: 500;
+}
+
+.unenroll-course-btn {
+  background-color: #f44336;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.unenroll-course-btn:hover {
+  background-color: #d32f2f;
+}
+
+.enrolled-courses li {
+  margin-bottom: 10px;
+  padding: 5px;
+}
+/* UserDashboard.css (adjustments for chatbox look) */
+.study-groups-section {
+  padding: 20px;
+}
+
+.study-groups-section h3 {
+  margin-top: 20px;
+}
+
+.study-groups-section form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.study-groups-section input {
+  padding: 10px; /* Increased padding for better touch targets */
+  border: 1px solid #ccc;
+  border-radius: 6px; /* Slightly more rounded */
+  font-size: 1em; /* Improve readability */
+}
+
+.study-groups-section button {
+  padding: 10px 15px; /* Increased padding */
+  background-color: #007bff; /* More standard primary color */
+  color: white;
+  border: none;
+  border-radius: 6px; /* Slightly more rounded */
+  cursor: pointer;
+  font-size: 1em; /* Improve readability */
+  transition: background-color 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+.study-groups-section button:hover {
+  background-color: #0056b3;
+}
+
+.study-groups-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.study-groups-section li {
+  margin-bottom: 10px;
+  padding: 12px; /* Increased padding */
+  border: 1px solid #ddd;
+  border-radius: 6px; /* Slightly more rounded */
+  background-color: #f9f9f9; /* Light background for list items */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.study-groups-section li > span {
+  flex-grow: 1;
+}
+
+.study-groups-section li button {
+  padding: 8px 12px; /* Adjusted button padding within list */
+  margin-left: 10px;
+  font-size: 0.9em;
+}
+
